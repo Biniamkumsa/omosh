@@ -1,0 +1,668 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+:root {
+  --primary-color: #a855f7;
+  --primary-color-dark: #9333ea;
+  --secondary-color: #ca8a04;
+  --text-dark: #1f2937;
+  --text-light: #6b7280;
+  --extra-light: #faf5ff;
+  --max-width: 1200px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+html{
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  z-index: 99;
+}
+
+.nav__content {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .logo a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  transition: 0.3s;
+}
+nav .logo a:hover {
+  color: var(--primary-color-dark);
+}
+
+nav .checkbox {
+  display: none;
+}
+
+nav input {
+  display: none;
+}
+nav .checkbox i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  transition: left 0.3s;
+}
+
+ul li a {
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--text-dark);
+  transition: 0.3s;
+}
+
+ul li a:hover {
+  border-top-color: var(--secondary-color);
+  border-bottom-color: var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+.section {
+  background-color: var(--extra-light);
+}
+
+.section__container {
+  min-height: 100vh;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.subtitle {
+  letter-spacing: 2px;
+  color: var(--text-light);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 3rem;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.title span {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.description {
+  line-height: 1.5rem;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+  font-size: 18px;
+}
+
+.action__btns {
+  display: flex;
+  gap: 1rem;
+}
+
+.action__btns button {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 1rem 2rem;
+  outline: none;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.hire__me {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.hire__me:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.portfolio {
+  color: var(--primary-color);
+}
+
+.portfolio:hover {
+  background-color: var(--primary-color-dark);
+  color: #ffffff;
+}
+
+.image {
+  display: grid;
+  place-items: center;
+}
+
+.image img {
+  width: min(30rem, 100%);
+  border-radius: 50%;
+}
+
+/* My ideas */
+.FACT {
+  font-size: 4rem;
+  font-weight: 400;
+  color: black;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  position: relative;
+  bottom: 0px;
+  right: 0%;
+  text-align: center;
+}
+.FACT span{
+  color: #9333ea;
+}
+#fact{
+  padding: 50px 0;
+  margin-right: 10%;
+  margin-left: 10%;
+  overflow-x: hidden;
+}
+.facts{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+.pic{
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 5s;
+}
+.pic img{
+  width: 100%;
+  height: 60vh;
+  border-radius: 10px;
+  display: block;
+}
+.layer{
+  width: 100%;
+  height: 0%;
+  background-image: linear-gradient(rgb(0, 0, 0,0.3),#9333ea);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  font-size: 14px;
+  transition: height 0.5s;
+}
+.layer h3{
+  font-weight: 2000;
+  margin-bottom: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+}
+.layer p{
+  color: white;
+  font-size: 16px;
+  text-align: left;
+  font-weight: 500;
+}
+.pic:hover img{
+  transform: scale(1);
+}
+.pic:hover .layer{
+  height: 100%;
+}
+
+/* End of ideas */
+
+.contianer .about{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.about{
+  min-height: 100vh;
+  width: 100%;
+  padding: 70px 0px;
+}
+.about img{
+  border: 2px solid #9333ea;
+  box-shadow: 0 0 5px #9333ea,
+              0 0 5px #9333ea;
+  height: auto;
+  width: 50%;
+  border-radius: 5em;
+  /* border-radius: 60%; */
+  transition: 0.5s ease;
+  /* width: min(30rem, 100%); */
+
+}
+.main{
+  width: 1200px;
+  max-width: 95%;
+  margin: 100px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.about-text{
+  margin: 0 0 0 70px;
+}
+.about-text h1{
+  color: #9333ea;
+  font-size: 50px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+.about-text h5{
+  font-size: 28px;
+  text-transform: 25px;
+  margin-bottom: 0.4em;
+}
+
+.about-text span{
+  color: #9333ea;
+  letter-spacing: 1px;
+  line-height: 28px;
+  font-size: 28px;
+  margin-bottom: 45px;
+}
+
+
+.skill-container {
+  height: 30vh;
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  align-items: top;
+}
+
+.skill-container .skill {
+  position: relative;
+  margin: 0px 80px;
+}
+
+.skill-container .skill .outer {
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  padding: 20px;
+  box-shadow: 6px 6px 10px -1px rgba(0 0 0 /.15),
+      -6px -6px 10px -1px rgba(255 255 255 / .7);
+}
+
+.skill-container .skill .outer .inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  box-shadow: inset 4px 4px 6px -1px rgba(0 0 0/ .2),
+      inset -4px -4px 6px -1px rgba(255 255 255 / .7),
+      -.5px -.5px 0px rgba(255 255 255 / 1),
+      .5px .5px 0px rgba(0 0 0 /.15),
+      0px 12px 10px -10px rgba(0 0 0 / 0.05);
+}
+
+.skill-container .skill .outer .inner .number {
+  font-weight: 800;
+}
+
+
+.skill-container .skill:nth-child(1) .outer .inner .number {
+  color: #7811f7;
+}
+
+.skill-container .skill:nth-child(2) .outer .inner .number {
+  color: #7811f7;
+}
+
+.skill-container .skill:nth-child(3) .outer .inner .number {
+  color: #7811f7;
+}
+
+circle {
+  fill: none;
+  stroke-width: 20px;
+  stroke-dasharray: 472;
+  stroke-dashoffset: 472;
+  transition: 2s linear;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.skill-container .skill:nth-child(1) circle {
+  stroke: #7811f7;
+}
+
+.skill-container .skill:nth-child(2) circle {
+  stroke: #7811f7;
+}
+
+.skill-container .skill:nth-child(3) circle {
+  stroke: #7811f7;
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000000;
+  max-height: 50px;
+  color: white;
+}
+
+
+/* my ability */
+.ABOUT-TEXT{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ABOUT-TEXT h1{
+  color: #9333ea;
+  font-size: 50px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+
+ .ability {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.sub-ability {
+  display: flex;
+  margin-left: 37px;
+
+}
+
+.sub-ability p{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 60px 30px;
+  font-size: 26px;
+  font-weight: 5600;
+  text-transform: uppercase;
+}
+
+
+.Testimonies{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Testimonies h1{
+  color: #9333ea;
+  font-size: 50px;
+  text-transform: capitalize;
+  margin: 300px;
+}
+
+
+
+@media (width < 750px) {
+  nav .checkbox {
+    display: block;
+  }
+
+  ul {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 85px);
+    left: -100%;
+    top: 85px;
+    background-color: var(--extra-light);
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  nav #check:checked ~ ul {
+    left: 0;
+  }
+
+  ul li a {
+    font-size: 1.25rem;
+  }
+
+  .section__container {
+    padding: 10rem 1rem 5rem 1rem;
+    text-align: center;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .image {
+    grid-area: 1/1/2/2;
+  }
+
+  .action__btns {
+    margin: auto;
+  }
+}
+.container{
+  width: 246px;
+  overflow: hidden;
+}
+.container .text{
+  position: relative;
+  color: #9333ea;
+  font-size: 26px;
+  font-weight: 600;
+}
+.container .text.first-text{
+  color: #000000;
+}
+.text.sec-text:before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #faf5ff;
+  border-left: 2px solid #9333ea;
+  animation: animate 4s steps(12) infinite;
+}
+@keyframes animate{
+  40%, 60%{
+      left: calc(100% + 4px);
+  }
+  100%{
+      left: 0%;
+  }
+}
+/* Media Queries for iPads */
+@media (max-width: 1024px) {
+  /* Adjustments for iPad Pro and iPad Air */
+  #fact {
+    padding: 30px 0;
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+
+  .facts {
+    grid-gap: 30px;
+  }
+
+  .pic img {
+    height: 50vh;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Adjustments for iPad Mini */
+  #fact {
+    padding: 20px 0;
+    margin-right: 3%;
+    margin-left: 3%;
+  }
+
+  .facts {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+  }
+
+  .pic img {
+    height: 40vh;
+  }
+}
+
+/* Your existing CSS */
+
+/* Media Queries for smartphones */
+@media (max-width: 750px) {
+  .FACT {
+    font-size: 2rem;
+    margin-bottom: 5px;
+  }
+
+  .facts {
+    display: block;
+  }
+
+  .pic {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .pic img {
+    height: auto;
+  }
+
+  .layer {
+    height: auto;
+    padding: 20px;
+    font-size: 14px;
+  }
+}
+
+/* Media Queries for iPads */
+@media (max-width: 1024px) {
+  /* Adjustments for iPad Pro and iPad Air */
+  #fact {
+    padding: 30px 0;
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+
+  .facts {
+    grid-gap: 30px;
+  }
+
+  .pic img {
+    height: 50vh;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Adjustments for iPad Mini */
+  #fact {
+    padding: 20px 0;
+    margin-right: 3%;
+    margin-left: 3%;
+  }
+
+  .facts {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+  }
+
+  .pic img {
+    height: 40vh;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
